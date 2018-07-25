@@ -1,7 +1,7 @@
 #!/bin/bash
 # Ask the user for their name
 echo Welcome to the jel.ly installer
-echo Do you want to have a reverse proxy installed with a working config? y N
+echo Do you want to have a reverse proxy installed with a config? y/N
 read varname
 echo Installing dependencies
 apt update
@@ -27,7 +27,7 @@ cd jel.ly
 npm install -g gulp
 npm install
 
-echo "Setup Complete. The modue screen has been installed. If you are planing on having an always on server:"
+echo "Setup Complete. The module screen has been installed. If you are planing on having an always on server:"
 echo "Run screen -t jelly"
 echo "Then at your home dir: sudo bash startserver.sh"
 echo "Have Fun!"
