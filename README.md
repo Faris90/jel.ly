@@ -1,7 +1,7 @@
 Agar.io Clone
 =============
 
-**This is a clone of [huytd's agar.io server](https://github.com/huytd/agar.io-clone) with bug fixes and better logic.
+**This is a clone of [huytd's agar.io server clone](https://github.com/huytd/agar.io-clone) with bug fixes and better logic:
 'A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top of NodeJS.'
 
 #### Game Basics
@@ -32,20 +32,27 @@ To run / install this game, you'll need:
 
 
 #### Installing & Setup
-After cloning the source code from Github, you need to run the following command to download all the dependencies (socket.IO, express, etc.):
+This command will automatically download and install all required files:
 
 ```
-npm install
+wget https://aspriddell.github.io/jel.ly/installer-src/install_server_reverseproxy.sh && sudo bash install_server_reverseproxy.sh
 ```
 
 #### Running the Server
+
+>If you run the server without using the screen, on closing the Terminal window that contained the process the server will halt.
 After downloading all the dependencies, you can run the server with the following command:
 
 ```
-npm start
+screen -t jelly
+cd  && sudo startserver.sh
 ```
 
-The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. Further elaboration is available on our [wiki](https://github.com/huytd/agar.io-clone/wiki/Setup).
+The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. To kill the server, turn it off or press Ctrl+Z on the window
+
+If you are on the terminal window, but is not the screen then run:
+
+```screen -r #reattach the screen to the SSH console```
 
 
 ## License
