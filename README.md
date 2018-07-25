@@ -47,7 +47,7 @@ If you are on the terminal window, but is not the screen then run:
 
 ```screen -r #reattach the screen to the SSH console```
 
->>Killing the server with Ctrl+Z requires you to restart the server before it can work again.
+>Killing the server with Ctrl+Z requires you to restart the server before it can work again.
 
 ## License
 >You can check out the full license [here](https://github.com/aspriddell/jel.ly/blob/master/LICENSE).
