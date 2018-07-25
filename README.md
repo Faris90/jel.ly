@@ -29,7 +29,6 @@ Agar.io Clone
 
 We are in progress of creating a script that will install a working copy of the game and a reverse proxy.
 
----
 
 #### Requirements
 To run / install this game, you'll need: 
