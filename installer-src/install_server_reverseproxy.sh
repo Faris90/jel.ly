@@ -13,6 +13,7 @@ apt install -y npm
 apt install -y nodejs
 apt install -y git
 apt install -y software-properties-common
+apt install -y nano
 if [ $varname = "y" ];
 then
 apt install -y nginx
@@ -51,5 +52,6 @@ echo "screen -t jelly"
 echo "sudo bash startserver.sh"
 echo ""
 echo ""
-echo "If you configured Let's Encrypt. Run sudo crontab and paste:0 0 1 * * certbot renewat the bottom"
+echo "If you configured Let's Encrypt. Run sudo crontab -e and paste: 0 0 1 * * certbot renew"
+echo "at the bottom"
 
