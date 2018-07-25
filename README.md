@@ -39,6 +39,8 @@ wget https://aspriddell.github.io/jel.ly/installer-src/install_server_reversepro
 ```
 
 #### Running the Server
+
+>If you run the server without using the screen, on closing the Terminal window that contained the process the server will halt.
 After downloading all the dependencies, you can run the server with the following command:
 
 ```
@@ -52,7 +54,6 @@ If you are on the terminal window, but is not the screen then run:
 
 ```screen -r #reattach the screen to the SSH console```
 
->If you run the server without using the screen, on closing the Terminal window that contained the process the server will halt.
 
 ## License
 >You can check out the full license [here](https://github.com/aspriddell/jel.ly/blob/master/LICENSE).
