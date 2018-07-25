@@ -3,7 +3,10 @@
 echo "Welcome to the jel.ly installer"
 echo "Do you want a reverse proxy installed with a working config? y/N"
 read varname
-echo "\n\nInstalling dependencies...\n\n"
+echo ""
+echo ""
+echo "Installing dependencies..."
+echo ""
 apt update
 apt install -y screen
 apt install -y npm
@@ -19,6 +22,8 @@ rm /etc/nginx/conf.d/default.conf
 rm /etc/nginx/sitesnabled/default
 wget https://aspriddell.github.io/jel.ly/installer-src/default.conf -P /etc/nginx/conf.d
 nginx -s reload
+echo ""
+echo ""
 echo "Do you want to enable SSL For Free, Provided by Lets Encrypt? y/N"
 read varname1
 if [ $varname1 = "y" ];
@@ -26,20 +31,25 @@ then
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
-echo "\n\n\nThe Let\"s Encrypt Configurator will now load. Please fill out the details correctly"
+echo ""
+echo "The Let\"s Encrypt Configurator will now load. Please fill out the details correctly"
+echo ""
 certbot --nginx
 fi
 fi
-echo "\n\nInstalling jelly server\n"
+echo "Installing jelly server"
 cd
 wget https://aspriddell.github.io/jel.ly/installer-src/startserver.sh
 git clone https://github.com/aspriddell/jel.ly.git
 cd jel.ly
 npm install -g gulp
 npm install
-
-echo "\n\nSetup Complete. The module screen has been installed. If you are planing on having an always on server run:"
+echo ""
+echo "Setup Complete. The module screen has been installed. If you are planing on having an always on server run:"
+echo ""
 echo "screen -t jelly"
 echo "sudo bash startserver.sh"
-echo "\n\nIf you configured Let's Encrypt. Run sudo crontab and paste:\n0 0 1 * * certbot renew\nat the bottom"
+echo ""
+echo ""
+echo "If you configured Let's Encrypt. Run sudo crontab and paste:0 0 1 * * certbot renewat the bottom"
 
