@@ -25,7 +25,7 @@ Agar.io Clone
 ---
 
 
-####Setup
+##Setup
 
 We are in progress of creating a script that will install a working copy of the game and a reverse proxy.
 
