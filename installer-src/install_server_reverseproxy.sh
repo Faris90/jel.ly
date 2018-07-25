@@ -1,17 +1,17 @@
 #!/bin/bash
 # Ask the user for their name
 echo Welcome to the jel.ly installer
-echo Do you want to have a reverse proxy installed with a working config?
+echo Do you want to have a reverse proxy installed with a working config? y N
 read varname
 echo Installing dependencies
 apt update
-apt install screen
-apt install npm
-apt install nodejs
-apt install git
+apt install -y screen
+apt install -y npm
+apt install -y nodejs
+apt install -y git
 if [ $varname="y" ];
 then
-apt-get install nginx
+apt-get install -y nginx
 systemctl start nginx
 systemctl enable nginx
 rm /etc/nginx/conf.d/default.conf
@@ -21,7 +21,7 @@ fi
 
 cd
 wget https://aspriddell.github.io/jel.ly/installer-src/startserver.sh
-git clone git clone https://github.com/aspriddell/jel.ly.git
+git clone https://github.com/aspriddell/jel.ly.git
 cd jel.ly
 npm install -g gulp
 npm install
