@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo -e Welcome to the jel.ly installer
-echo -e Do you want a reverse proxy installed with a working config? y/N
+echo "Welcome to the jel.ly installer"
+echo "Do you want a reverse proxy installed with a working config? y/N"
 read varname
-echo -e \n\nInstalling dependencies...\n\n
+echo "\n\nInstalling dependencies...\n\n"
 apt update
 apt install -y screen
 apt install -y npm
@@ -16,21 +16,21 @@ apt install -y nginx
 systemctl start nginx
 systemctl enable nginx
 rm /etc/nginx/conf.d/default.conf
-rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sitesnabled/default
 wget https://aspriddell.github.io/jel.ly/installer-src/default.conf -P /etc/nginx/conf.d
 nginx -s reload
-echo -e Do you want to enable SSL For Free, Provided by Let's Encrypt? y/N
+echo "Do you want to enable SSL For Free, Provided by Lets Encrypt? y/N"
 read varname1
 if [ $varname1 = "y" ];
 then
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
-echo -e \n\n\nThe Let's Encrypt Configurator will now load. Please fill out the details correctly
+echo "\n\n\nThe Let\"s Encrypt Configurator will now load. Please fill out the details correctly"
 certbot --nginx
 fi
 fi
-echo -e \n\nInstalling jelly server\n
+echo "\n\nInstalling jelly server\n"
 cd
 wget https://aspriddell.github.io/jel.ly/installer-src/startserver.sh
 git clone https://github.com/aspriddell/jel.ly.git
@@ -38,8 +38,8 @@ cd jel.ly
 npm install -g gulp
 npm install
 
-echo -e "\n\nSetup Complete. The module screen has been installed. If you are planing on having an always on server run:"
-echo -e "screen -t jelly"
-echo -e "sudo bash startserver.sh"
-echo -e "\n\nIf you configured Let's Encrypt. Run sudo crontab -e and paste:\n0 0 1 * * certbot renew\nat the bottom"
+echo "\n\nSetup Complete. The module screen has been installed. If you are planing on having an always on server run:"
+echo "screen -t jelly"
+echo "sudo bash startserver.sh"
+echo "\n\nIf you configured Let's Encrypt. Run sudo crontab and paste:\n0 0 1 * * certbot renew\nat the bottom"
 
