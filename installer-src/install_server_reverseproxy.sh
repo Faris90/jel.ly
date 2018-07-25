@@ -15,6 +15,7 @@ apt-get install -y nginx
 systemctl start nginx
 systemctl enable nginx
 rm /etc/nginx/conf.d/default.conf
+rm /etc/nginx/sites-enabled/default
 wget https://aspriddell.github.io/jel.ly/installer-src/default.conf -P /etc/nginx/conf.d
 nginx -s reload
 fi
