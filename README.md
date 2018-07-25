@@ -8,18 +8,17 @@ Agar.io Clone
 - Login doesn't crash on guessing incorrect password
 - The game won't crash when people split
 - Scrollbar bug fixed
-- can eat others even when split
+- Eating others is easier (able to do so if split)
 - Setup created
-- reverse proxy setup included
 - Changed title from `Open Agar` to `Jelly`
 - Nginx Reverse proxy and Let's Encrypt SSL intergrations
-- Install Script created`
+- Install Script created
 
 ---
 
 #### Requirements
 To run / install this game, you'll need: 
-- A server with at least 1GB ram
+- A server with at least 1GB RAM
 - 4GB HDD/SSD Space
 - Ubuntu/Debian Based system (apt)
 
