@@ -1,7 +1,7 @@
 Agar.io Clone
 =============
 
-**This is a clone of [huytd's agar.io server clone](https://github.com/huytd/agar.io-clone) with bug fixes and better logic:
+>This is a clone of [huytd's agar.io server](https://github.com/huytd/agar.io-clone) with bug fixes and better logic:
 'A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top of NodeJS.'
 
 #### Game Basics
@@ -25,15 +25,17 @@ Agar.io Clone
 - can eat others even when split
 - Setup created
 - reverse proxy setup included
-- Changed title from `Open Agar` to `Jelly` and `Jel.ly`
+- Changed title from `Open Agar` to `Jelly`
+- Nginx Reverse proxy and Let's Encrypt SSL intergrations
+- Install Script created`
 
 ---
 
 #### Requirements
 To run / install this game, you'll need: 
-- NodeJS with NPM installed.
-- socket.IO.
-- Express.
+- A server with at least 1GB ram
+- 4GB HDD/SSD Space
+- Ubuntu/Debian Based system (apt)
 
 
 #### Installing & Setup
@@ -50,15 +52,16 @@ After downloading all the dependencies, you can run the server with the followin
 
 ```
 screen -t jelly
-cd  && sudo startserver.sh
+sudo startserver.sh
 ```
 
-The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. To kill the server, turn it off or press Ctrl+Z on the window
+The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. To kill the server either turn it off or press Ctrl+Z on the window running the process.
 
 If you are on the terminal window, but is not the screen then run:
 
 ```screen -r #reattach the screen to the SSH console```
 
+>>Killing the server with Ctrl+Z requires you to restart the server before it can work again.
 
 ## License
 >You can check out the full license [here](https://github.com/aspriddell/jel.ly/blob/master/LICENSE).
