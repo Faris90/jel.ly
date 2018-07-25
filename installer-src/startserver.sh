@@ -1,4 +1,4 @@
-echo "Starting Server"
+echo Starting Server
 cd 
 cd jel.ly
 gulp run
