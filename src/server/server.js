@@ -353,19 +353,22 @@ io.on('connection', function (socket) {
         socket.broadcast.emit('serverSendPlayerChat', {sender: _sender, message: _message.substring(0,35)});
     });
 
-    socket.on('pass', function(data) {
-        if (data[0] === c.adminPass) {
-            console.log('[ADMIN] ' + currentPlayer.name + ' just logged in as an admin!');
-            socket.emit('serverMSG', 'Welcome back ' + currentPlayer.name);
-            socket.broadcast.emit('serverMSG', currentPlayer.name + ' just logged in as admin!');
-            currentPlayer.admin = true;
-        } else {
-            
-            // TODO: Actually log incorrect passwords.
-              console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
-              socket.emit('serverMSG', 'Password incorrect, attempt logged.');
-             pool.query('INSERT INTO logging SET name=' + currentPlayer.name + ', reason="Invalid login attempt as admin"');
+    socket.on('pass', function (data) {
+        try {
+            if (data[0] === c.adminPass) {
+                console.log('[ADMIN] ' + currentPlayer.name + ' just logged in as an admin!');
+                socket.emit('serverMSG', 'Welcome back ' + currentPlayer.name);
+                socket.broadcast.emit('serverMSG', currentPlayer.name + ' just logged in as admin!');
+                currentPlayer.admin = true;
+            } else {
+
+                // TODO: Actually log incorrect passwords.
+                console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
+                socket.emit('serverMSG', 'Password incorrect, attempt logged.');
+                pool.query('INSERT INTO logging SET name=' + currentPlayer.name + ', reason="Invalid login attempt as admin"');
+            }
         }
+        catch (err) { }
     });
 
     socket.on('kick', function(data) {
@@ -445,17 +448,20 @@ io.on('connection', function (socket) {
     });
     socket.on('2', function(virusCell) {
         function splitCell(cell) {
-            if(cell.mass >= c.defaultPlayerMass*2) {
-                cell.mass = cell.mass/2;
-                cell.radius = util.massToRadius(cell.mass);
-                currentPlayer.cells.push({
-                    mass: cell.mass,
-                    x: cell.x,
-                    y: cell.y,
-                    radius: cell.radius,
-                    speed: 25
-                });
+            try {
+                if (cell.mass >= c.defaultPlayerMass * 2) {
+                    cell.mass = cell.mass / 2;
+                    cell.radius = util.massToRadius(cell.mass);
+                    currentPlayer.cells.push({
+                        mass: cell.mass,
+                        x: cell.x,
+                        y: cell.y,
+                        radius: cell.radius,
+                        speed: 25
+                    });
+                }
             }
+            catch (err) { }
         }
 
         if(currentPlayer.cells.length < c.limitSplit && currentPlayer.massTotal >= c.defaultPlayerMass*2) {
@@ -529,7 +535,7 @@ function tickPlayer(currentPlayer) {
     }
 
     function collisionCheck(collision) {
-        if (collision.aUser.mass > collision.bUser.mass * 1.1  && collision.aUser.radius > Math.sqrt(Math.pow(collision.aUser.x - collision.bUser.x, 2) + Math.pow(collision.aUser.y - collision.bUser.y, 2))*1.75) {
+        if (collision.aUser.mass > collision.bUser.mass && collision.aUser.radius > Math.sqrt(Math.pow(collision.aUser.x - collision.bUser.x, 2) + Math.pow(collision.aUser.y - collision.bUser.y, 2))) {
             console.log('[DEBUG] Killing user: ' + collision.bUser.id);
             console.log('[DEBUG] Collision info:');
             console.log(collision);
