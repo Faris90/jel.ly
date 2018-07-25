@@ -9,7 +9,7 @@ apt install -y screen
 apt install -y npm
 apt install -y nodejs
 apt install -y git
-if [ $varname="y" ];
+if [ $varname = "y" ];
 then
 apt-get install -y nginx
 systemctl start nginx
