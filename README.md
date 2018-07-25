@@ -21,6 +21,11 @@ Agar.io Clone
 ## Latest Changes
 - Login doesn't crash on guessing incorrect password
 - The game won't crash when people split
+- Scrollbar bug fixed
+- can eat others even when split
+- Setup created
+- reverse proxy setup included
+- Changed title from `Open Agar` to `Jelly` and `Jel.ly`
 
 ---
 
