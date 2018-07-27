@@ -41,7 +41,8 @@ screen -t jelly
 sudo startserver.sh
 ```
 
-The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. To kill the server either turn it off or press Ctrl+Z on the window running the process.
+The game will then be accessible at `http://server_ip:3000` or port 80 if you installed Nginx (http only) and Let's Encrypt (https enabled). The default port for the base server (not nginx) is `3000`, however this can be changed in config `jel.ly/config.json`. 
+To kill the server either turn it off or press Ctrl+Z on the window/screen running the process.
 
 If you are on the terminal window, but is not the screen then run:
 
