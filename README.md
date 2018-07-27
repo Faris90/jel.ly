@@ -13,6 +13,7 @@ Agar.io Clone
 - Changed title from `Open Agar` to `Jelly`
 - Nginx Reverse proxy and Let's Encrypt SSL intergrations
 - Install Script created
+- Settings and Spectate buttons set to `visible` but `disabled` due to settings not taking effect in game and the `spectate` button causing unnecessary lag and server load
 
 ---
 
