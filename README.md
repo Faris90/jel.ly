@@ -44,6 +44,9 @@ sudo startserver.sh
 The game will then be accessible at `http://server_ip:3000` or port 80 if you installed Nginx (http only) and Let's Encrypt (https enabled). The default port for the base server (not nginx) is `3000`, however this can be changed in config `jel.ly/config.json`. 
 To kill the server either turn it off or press Ctrl+Z on the window/screen running the process.
 
+>Error 502 Bad Gateway means that the backend server (jelly) is not running
+>Err_Connection_Refused means that Nginx or your reverse proxy is not working. Nothing is listening on that address, to fix this restart your web server service
+
 If you are on the terminal window, but is not the screen then run:
 
 ```
