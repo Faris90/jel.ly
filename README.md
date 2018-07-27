@@ -46,7 +46,9 @@ To kill the server either turn it off or press Ctrl+Z on the window/screen runni
 
 If you are on the terminal window, but is not the screen then run:
 
-```screen -r #reattach the screen to the SSH console```
+```
+screen -r #reattach the screen to the SSH console
+```
 
 >Killing the server with Ctrl+Z requires you to restart the server before it can work again.
 
