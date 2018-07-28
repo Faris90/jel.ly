@@ -57,6 +57,8 @@
     "socket.io-client": "^2.1.1",
     "webpack": "^4.16.3",
     "webpack-stream": "^5.0.0",
-    "mysql": "^2.5.5"
+    "mysql": "^2.5.5",
+    "minimatch": "^3.0.4",
+    "graceful-fs": "^4.1.11"
   }
 }
