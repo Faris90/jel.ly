@@ -5,7 +5,7 @@ echo "Do you want a reverse proxy installed with a working config? y/N"
 read varname
 echo ""
 echo ""
-echo "Installing dependencies and Upgrading System"
+echo "Installing dependencies and Upgrading System. This may take some time"
 echo ""
 apt update
 apt upgrade -y
