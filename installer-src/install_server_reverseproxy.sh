@@ -34,7 +34,7 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
 echo ""
-echo "The Let\"s Encrypt Configurator will now load. Please fill out the details correctly"
+echo "The Let's Encrypt Configurator will now load. Please fill out the details correctly"
 echo ""
 certbot --nginx
 fi
