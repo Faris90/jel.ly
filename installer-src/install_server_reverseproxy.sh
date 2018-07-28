@@ -5,9 +5,10 @@ echo "Do you want a reverse proxy installed with a working config? y/N"
 read varname
 echo ""
 echo ""
-echo "Installing dependencies..."
+echo "Installing dependencies and Upgrading System"
 echo ""
-apt update
+apt update -s
+apt upgrade -s
 apt install -y screen
 apt install -y npm
 apt install -y nodejs
