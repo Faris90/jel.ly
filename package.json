@@ -1,7 +1,7 @@
 {
-  "name": "jel.ly",
-  "version": "1.1",
-  "description": "A clone of huytd's agar.io server with bug fixes and better logic",
+  "name": "agar-clone",
+  "version": "1.0.0",
+  "description": "A simple Agar.io clone",
   "main": "server/server.js",
   "scripts": {
     "build": "gulp build",
