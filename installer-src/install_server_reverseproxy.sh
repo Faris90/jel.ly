@@ -7,7 +7,7 @@ echo ""
 echo ""
 echo "Installing dependencies and Upgrading System"
 echo ""
-apt update -s
+apt update
 apt upgrade -y
 apt install -y screen
 apt install -y npm
