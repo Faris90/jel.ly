@@ -8,7 +8,7 @@ echo ""
 echo "Installing dependencies and Upgrading System"
 echo ""
 apt update -s
-apt upgrade -s
+apt upgrade -y
 apt install -y screen
 apt install -y npm
 apt install -y nodejs
