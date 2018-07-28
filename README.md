@@ -38,6 +38,7 @@ After downloading all the dependencies, you can run the server with the followin
 
 ```
 screen -t jelly
+cd 
 sudo startserver.sh
 ```
 
