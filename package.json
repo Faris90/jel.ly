@@ -1,7 +1,7 @@
 {
-  "name": "agar-clone",
-  "version": "1.0.0",
-  "description": "A simple Agar.io clone",
+  "name": "jel.ly",
+  "version": "1.1",
+  "description": "A clone of huytd's agar.io server with bug fixes and better logic",
   "main": "server/server.js",
   "scripts": {
     "build": "gulp build",
@@ -11,11 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/huytd/agar.io-clone.git"
+    "url": "https://github.com/aspriddell/jel.ly.git"
   },
-  "author": "Huy Tran",
+  "author": "Albie Spriddell",
   "license": "MIT",
   "contributors": [
+    "aspriddell <admin@dragonfruit.network> (https://github.com/aspriddell)"
     "abalabahaha <hi@abal.moe> (https://github.com/abalabahaha)",
     "Ariamiro <dossantosgusmaosavio@gmail.com> (https://github.com/Ariamiro)",
     "Bjarne Oeverli <bjarne.oeverli@gmail.com> (https://github.com/bjarneo)",
@@ -52,8 +53,8 @@
     "nodemon": "^1.9.2",
     "sat": "^0.6.0",
     "simple-quadtree": "^0.1.3",
-    "socket.io": "^1.7.4",
-    "socket.io-client": "^1.7.4",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "webpack": "^1.4.0",
     "webpack-stream": "^3.2.0",
     "mysql": "^2.5.5"
