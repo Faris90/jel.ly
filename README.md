@@ -21,7 +21,7 @@ Agar.io Clone
 To run / install this game, you'll need: 
 - A server with at least 1GB RAM
 - 4GB HDD/SSD Space
-- Ubuntu/Debian Based system (apt)
+- Ubuntu Based system (Debian will NOT work, you must do it manually)
 
 
 #### Installing & Setup
