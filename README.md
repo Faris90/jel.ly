@@ -1,4 +1,4 @@
-Agar.io Clone
+Agar.io Clone [![Build Status](https://travis-ci.com/aspriddell/jel.ly.svg?branch=master)](https://travis-ci.com/aspriddell/jel.ly)
 =============
 
 >This is a clone of [huytd's agar.io server](https://github.com/huytd/agar.io-clone) with bug fixes and better logic:
