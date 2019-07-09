@@ -21,7 +21,7 @@ Agar.io Clone [![Build Status](https://travis-ci.com/aspriddell/jel.ly.svg?branc
 To run / install this game, you'll need: 
 - A server with at least 1GB RAM
 - 4GB HDD/SSD Space
-- Ubuntu Based system (Debian will NOT work, you must do it manually)
+- Ubuntu Based system (Debian will NOT work, you must setup and install manually)
 
 
 #### Installing & Setup
@@ -60,4 +60,4 @@ screen -r #reattach the screen to the SSH console
 ## License
 >You can check out the full license [here](https://github.com/aspriddell/jel.ly/blob/master/LICENSE).
 
-This project is licensed under the terms of the **MIT** license.
+This project is licensed under the terms of the **GPL3** license.
